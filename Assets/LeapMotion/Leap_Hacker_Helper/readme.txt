@@ -26,11 +26,9 @@ Installation
 ======================
 
 1. Import this package into your Unity project.
-2. Download the LeapMotion SDK for your OS from: https://developer.leapmotion.com/
-2. Add the LeapMotion SDK to your project. Instructions here: https://developer.leapmotion.com/documentation/Languages/CSharpandUnity/Guides/Setup_Unity.html
-3. Drag the LeapManager prefab into your scene.
-4. Go make a cool game.
-5. When your cool game is done (or before!) show it to us via @LeapMotion on twitter.
+2. Drag the LeapManager prefab into your scene.
+3. Go make a cool game.
+4. When your cool game is done (or before!) show it to us via @LeapMotion on twitter.
 
 ======================
 Package Contents:
@@ -39,7 +37,7 @@ Package Contents:
 The folders and files you must import for the helper to work have been marked here with "**" before the name.
 All other folders are example resources to help get you up to speed quickly.
 
-+ ** Leap_GGJ # The root folder for the helper.
++ ** Leap_Hacker_Helper # The root folder for the helper.
  + example_scenes # Scenes showing example implementations of basic concepts.
   
   - Pointer_Movers.unity # Two game objects following a pointing finger in screen and world space.
@@ -70,19 +68,19 @@ All other folders are example resources to help get you up to speed quickly.
   - WorldMover.cs # When attached to a GameObject will move that object in world space based on your pointing finger.
 
 ======================
-General Useage
+General Usage
 ======================
 
 This package is meant to act as a set of boilerplate functions and architecture to get your Leap enabled 
-jam game up and running rapidly.
+project up and running rapidly.
 
 It solves the following problems:
 
 - Providing a central point of access to the LeapMotion Controller data.
 
-- Converting Leap data into Unity's units and Vector3 objects.
+- Converting Leap data into Unity's units and Vector3 objects. 
  > This is accomplished via three extension methods which return Unity Vector3 objects:
-  1. myVectorInstance.ToUnity() # For things like direciton vectors which are normalized.
+  1. myVectorInstance.ToUnity() # For things like direction vectors which are normalized.
   2. myVectorInstance.ToUnityScales() # For things like Acceleration/Velocity where units must be converted, but position is not a factor.
   3. myVectorInstance.ToUnityTranslated() # For things like positions where units must be scaled AND we want to offset the coordinates into our game's coordinate space.
 
@@ -90,7 +88,7 @@ It solves the following problems:
 
 - Providing helper methods for common concepts like "is this hand open?", or "how many fingers am I holding up?"
 
-To use the LeapManager in your scene, simply drag the LeapManager prefab from the "prefabs" folder in Leap_GGJ into your scene. It's just an empty game object with the script attached.
+To use the LeapManager in your scene, simply drag the LeapManager prefab from the "prefabs" folder in the root into your scene. It's just an empty game object with the script attached.
 
 A few of the class functions are static and can simply be accessed with a call to:
 
